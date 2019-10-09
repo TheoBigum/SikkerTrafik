@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagrammer</title>
+    <link rel="stylesheet" href="">
+    <style>
+        /*Cirkeldiagram*/
+        html {
+            background-color: #EAEAEA;
+            margin: 0;
+            padding: 0;
+            height: 100vw;
+        }
+
+        h1 {
+            font-family: safety;
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-family: safety;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+        }
+
+        h3 {
+            font-family: safety;
+            position: absolute;
+            left: 15px;
+            top: 90px;
+        }
+
+        p {
+            margin: 10px;
+            margin-top: 30px;
+            font-size: 1.4rem;
+            font-family: safety;
+            font-style: light;
+        }
+
+        sectionwrapper {
+            display: grid;
+        }
+
+        #container {
+            margin: 30px;
+            max-width: 40vh;
+            background-size: cover;
+            align-self: center;
+        }
+
+        #diagram {
+            border-radius: 500px;
+            fill: none;
+            stroke-width: 100;
+            transform: rotate(-90deg);
+        }
+
+        #stk1 {
+            stroke: #414B5A;
+            transition: 1s;
+        }
+
+        #stk2 {
+            stroke: #28292C;
+            transition: 1s;
+
+        }
+
+        #stk1:hover {
+            stroke: #4d5767;
+
+        }
+
+        #stk2:hover {
+            stroke: #83878e;
+
+        }
+
+        /*Barchart fartbøde*/
+
+        .container1 {
+            width: 60vw;
+        }
+
+        #linier {
+            stroke: #373D46;
+            Stroke-width: .1;
+            transition: 1.5s;
+        }
+
+        #text {
+            font-family: safety;
+            font-size: 0.3rem;
+        }
+
+        #disp {
+            font-family: safety;
+            font-size: .7rem;
+        }
+
+        #bars {
+            stroke: #414B5A;
+            stroke-width: 25;
+            transition: 2s;
+        }
+
+        .l1:hover {
+            stroke: #000000;
+            transition: 1s;
+        }
+
+        .l2:hover {
+            stroke: #6f7e93;
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Rådet for sikker trafik</h1>
+    </header>
+
+    <div id="sectionwrapper">
+        <div id="container">
+            <h2>Mænd <br> 68%</h2>
+            <h3>Kvinder <br> 32%</h3>
+            <svg id="diagram" viewbox="0 0 100 100">
+
+                <circle id="stk1" cx="50" cy="50" r="50" />
+                <circle id="stk2" cx="50" cy="50" r="50" />
+
+                <text x="-10" y="10">Mænd 68%</text>
+                <text x="-14" y="100">Kvinder 32%</text>
+
+            </svg>
+            <p>Over 2/3 af trafikulykker, blandt unge i alderen 18-24 år, der resulterer i dødsfald eller alvorlig tilskadekommen, er mænd.</p>
+        </div>
+        <div class="container1">
+            <h1>Hvem får flest fartbøder blandt unge 18-24 år?</h1>
+            <svg id="barchart" viewbox="-20 -10 230 120">
+                <g id="linier">
+                    <line x1="0" y1="100" x2="0" y2="0" />
+                    <line x1="0" y1="100" x2="100" y2="100" />
+                    <line x1="0" y1="50" x2="100" y2="50" />
+                    <line x1="0" y1="0" x2="100" y2="0" />
+                </g>
+
+                <g id="text">
+                    <text x="-7" y="100">0%</text>
+                    <text x="-12" y="53">50%</text>
+                    <text x="-16" y="5">100%</text>
+                    <text x="13" y="107">Mænd</text>
+                    <text x="43" y="107">Kvinder</text>
+
+                </g>
+
+                <g id="bars">
+                    <line class="l1" x1="20" y1="100" x2="20" y2="50" />
+                    <line x1="50" class="l2" y1="100" x2="50" y2="25" />
+
+                </g>
+
+                <text x="80" y="45" id="disp">50%</text>
+
+            </svg>
+        </div>
+
+
+    </div>
+
+    <script>
+        //CIRKELDIAGRAM
+        const values = [68.76, 31.24];
+        const offset = [0];
+        const omkreds = Math.PI * 100;
+        let total = 0;
+        values.forEach(v => total += v);
+        const faktor = omkreds / total;
+
+        console.log(omkreds, total, faktor);
+
+        window.addEventListener("load", animer);
+
+        function animer() {
+
+            document.querySelectorAll("#diagram circle").forEach((cirkel, i) => {
+                //            console.log(cirkel, i);
+                offset.push(values[i] + offset[i]);
+                console.log(offset);
+                cirkel.style.strokeDasharray = values[i] * faktor + " " + omkreds;
+                cirkel.style.strokeDashoffset = -offset[i] * faktor;
+
+            })
+
+        }
+
+
+        //BARCHART Fartbøde
+        const values1 = [68, 32];
+
+        window.addEventListener("load", animer1);
+
+        function animer1() {
+
+            document.querySelectorAll('#bars line').forEach((bar, i) => {
+                console.log(bar, i);
+                bar.setAttribute("y2", 100 - values1[i])
+                bar.addEventListener("mouseover", e => {
+
+                    document.querySelector("#disp").textContent = values1[i] + "%";
+
+                    bar.setAttribute("data-value", values1[i]);
+                    console.log(bar.dataset.value);
+
+                })
+            })
+        }
+    </script>
+</body></html>

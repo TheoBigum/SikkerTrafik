@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bar Chart</title>
+    <style>
+        #container {
+            width: 80vw;
+            border: 1px solid;
+        }
+
+        #linier {
+            stroke: green;
+            Stroke-width: .5;
+        }
+
+        #text {
+            font-size: 0.5rem;
+        }
+
+        #bars {
+            stroke: lightgreen;
+            stroke-width: 25;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <svg id="barchart" viewbox="-20 -10 230 120">
+            <g id="linier">
+                <line x1="0" y1="100" x2="0" y2="0" />
+                <line x1="0" y1="100" x2="200" y2="100" />
+                <line x1="0" y1="50" x2="200" y2="50" />
+                <line x1="0" y1="0" x2="200" y2="0" />
+            </g>
+
+            <g id="text">
+                <text x="-7" y="100">0</text>
+                <text x="-12" y="53">50</text>
+                <text x="-16" y="5">100</text>
+                <text x="13" y="107">Jan</text>
+                <text x="43" y="107">Feb</text>
+                <text x="73" y="107">Mar</text>
+            </g>
+
+            <g id="bars">
+                <line x1="20" y1="100" x2="20" y2="50" />
+                <line x1="50" y1="100" x2="50" y2="25" />
+                <line x1="80" y1="100" x2="80" y2="10" />
+            </g>
+
+            <text x="180" y="45" id="disp">50</text>
+
+        </svg>
+    </div>
+    <script>
+        const values = [76, 30, 97];
+
+        document.querySelectorAll('#bars line').forEach((bar, i) => {
+            console.log(bar, i);
+            bar.setAttribute("y2", 100 - values[i])
+            bar.addEventListener("mouseover", e => {
+
+                document.querySelector("#disp").textContent = values[i];
+
+                bar.setAttribute("data-value", values[i]);
+                console.log(bar.dataset.value);
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>
