@@ -1,0 +1,70 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+}
+
+img {}
+
+
+
+/****************NAVIGATION********************/
+
+nav {
+    height: 10vw;
+    width: 100vw;
+    background-color: #28292c;
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+
+}
+
+#return_container {
+    width: 100vw;
+    height: 4.5vw;
+    background-color: #3b4453;
+}
+
+.nav_left {
+    width: 40vw;
+}
+
+#logo_container {
+    margin: 1vw 0 1vw 10vw;
+    ;
+    width: 180px;
+    height: 46px;
+    background-image: url(assets/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav_right {
+    width: 60vw;
+}
+
+
+/****************SECTIONS*******************/
+
+#splash {
+    background-image: url(assets/snoet-vej-en-bil_redigeret.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    width: 100vw;
+
+}
+
+#section_1 {
+    background-color: #3b4453;
+    width: 100vw;
+    height: 80vh;
+}
+
+#section_2 {
+    background-color: #fff;
+}
+
+#section_3 {
+    background-color: #eaeaea;
+}
