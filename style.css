@@ -6,12 +6,14 @@ body {
 
 img {}
 
-
+h1 {
+    font-family: safety;
+}
 
 /****************NAVIGATION********************/
 
 nav {
-    height: 10vw;
+    height: 6vw;
     width: 100vw;
     background-color: #28292c;
     display: grid;
@@ -19,19 +21,12 @@ nav {
 
 }
 
-#return_container {
-    width: 100vw;
-    height: 4.5vw;
-    background-color: #3b4453;
-}
-
 .nav_left {
-    width: 40vw;
+    width: 30vw;
 }
 
 #logo_container {
     margin: 1vw 0 1vw 10vw;
-    ;
     width: 180px;
     height: 46px;
     background-image: url(assets/logo.png);
@@ -40,14 +35,92 @@ nav {
 }
 
 .nav_right {
-    width: 60vw;
+    width: 70vw;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #28292c;
+    height: 100%;
+}
+
+li {
+    float: left;
+
+}
+
+li a {
+    font-family: safety;
+    font-size: 1rem;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 34px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+/****************DROPDOWN*******************/
+
+.dropdown {
+    float: left;
+    font-size: 1rem;
+    height: 100%;
+}
+
+.dropdown .dropbtn {
+    height: 6vw;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: safety;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #3b4453;
+    width: 100vw;
+    position: absolute;
+}
+
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content:hover {
+    background-color: #3b4453;
+}
+
+.dropdown-content a:hover {
+    background-color: #3b4453;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: white;
+}
+
 
 
 /****************SECTIONS*******************/
 
 #splash {
-    background-image: url(assets/snoet-vej-en-bil_redigeret.jpg);
+    background-image: url(assets/sikker_splash%20cropped.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
@@ -58,13 +131,169 @@ nav {
 #section_1 {
     background-color: #3b4453;
     width: 100vw;
-    height: 80vh;
+    height: 10vh;
 }
 
 #section_2 {
     background-color: #fff;
+    width: 100vw;
+    max-height: 80vh;
 }
 
 #section_3 {
     background-color: #eaeaea;
+    width: 100vw;
+    max-height: 60vh;
+}
+
+#section_4 {
+    background-color: #fff;
+    width: 100vw;
+    max-height: 80vh;
+}
+
+#section_5 {
+    background-color: #eaeaea;
+    width: 100vw;
+    height: 60vh;
+}
+
+/****************CIRKELDIAGRAM*******************/
+
+#section_2 {
+    display: grid;
+    grid-column: repeat(2, 1fr);
+}
+
+
+#cirkel_container {
+    width: 50%;
+    grid-column: 1;
+    margin: 40px;
+    margin-left: 200px;
+}
+
+#cirkel_container h2 {
+    font-family: safety;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0;
+    position: static;
+
+}
+
+#cirkel_container h3 {
+    font-family: safety;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 30px;
+    position: static;
+}
+
+#cirkel_text {
+    width: 60%;
+    grid-column: 2;
+    align-self: center;
+    font-family: safety;
+    font-size: 2rem;
+    padding-left: 100px;
+}
+
+#diagram {
+    border-radius: 500px;
+    fill: none;
+    stroke-width: 100;
+    transform: rotate(-90deg);
+}
+
+#stk1 {
+    stroke: #3b4453;
+    transition: 2s;
+}
+
+#stk2 {
+    stroke: #eaeaea;
+    transition: 2s;
+}
+
+#stk1:hover {
+    stroke: #d10606;
+}
+
+#stk2:hover {
+    stroke: #83878e;
+}
+
+/****************SØJLEDIAGRAM*******************/
+#section_3 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1rf);
+    margin: 0;
+    padding: 0;
+}
+
+#barchart {
+    height: 100vh;
+    padding-left: 100px;
+}
+
+#bar_container {
+    grid-column: 2;
+
+}
+
+#bar_text {
+    grid-column: 1;
+    grid-row: 1;
+    font-size: 2rem;
+    padding: 20px;
+    align-self: baseline;
+
+
+}
+
+#linier {
+    stroke: #373D46;
+    Stroke-width: .1;
+    transition: 1s;
+}
+
+#text {
+    font-family: safety;
+    font-size: 0.3rem;
+}
+
+#disp {
+    font-family: safety;
+    font-size: .7rem;
+}
+
+#bars {
+    stroke: #414B5A;
+    stroke-width: 25;
+    transition: 2s;
+}
+
+.l1:hover {
+    stroke: #d10606;
+    transition: 1s;
+}
+
+.l2:hover {
+    stroke: #83878e;
+    transition: 1s;
+}
+
+/****************VIDEO*******************/
+
+
+#section_4 {
+    font-size: 8rem;
+}
+
+/****************Andet*******************/
+#section_5 {
+    font-size: 8rem;
+    align-self: center;
 }

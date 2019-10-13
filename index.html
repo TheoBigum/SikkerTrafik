@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lever du i den virkelige verden?</title>
+    <title>Rådet for Sikker Trafik</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,14 +14,88 @@
         <div class="nav_left">
             <div id="logo_container"></div>
         </div>
-        <div class="nav_right"></div>
+        <div class="nav_right">
+            <ul>
+                <div class="dropdown">
+                    <button class="dropbtn">KAMPAGNER
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <li><a href="#">Lever du i virkeligheden?</a></li>
+                        <li><a href="#">Kør bil når du kører bil</a></li>
+                        <li><a href="#">Brug 2 sek. mere</a></li>
+                        <li><a href="#">Nederen forældre</a></li>
+                        <li><a href="#">Teenager i trafikken</a></li>
+                    </div>
+                </div>
+                <li><a href="index.html">RÅD & VIDEN</a></li>
+                <li><a href="index.html">BØRN & UNGE</a></li>
+                <li><a href="index.html">SAMARBEJDE</a></li>
+                <li><a href="index.html">VIDEO</a></li>
+                <li><a href="index.html">PRESSE</a></li>
+                <li><a href="index.html">OM OS</a></li>
+            </ul>
+        </div>
         <div id="return_container"></div>
     </nav>
     <section id="splash">
     </section>
-    <section id="section_1"></section>
-    <section id="section_2"></section>
-    <section id="section_3"></section>
-    <section id="section_4"></section>
+    <section id="section_1">
+    </section>
+    <section id="section_2">
+        <div id="cirkel_container">
+            <h2>Mænd <br> 68%</h2>
+            <h3>Kvinder <br> 32%</h3>
+            <svg id="diagram" viewbox="0 0 100 100">
+                <circle id="stk1" cx="50" cy="50" r="50" />
+                <circle id="stk2" cx="50" cy="50" r="50" />
+
+            </svg>
+
+        </div>
+        <div id="cirkel_text">
+            <h1>Vidste du at, <br>Over 2/3 af trafikulykker, blandt unge<br> i alderen 18-24 år, der resulterer i dødsfald<br> eller alvorlig tilskadekommen,<br> er mænd.</h1>
+        </div>
+    </section>
+    <section id="section_3">
+        <div id="bar_container">
+            <svg id="barchart" viewbox="-20 -10 230 220">
+                <g id="linier">
+                    <line x1="0" y1="100" x2="0" y2="0" />
+                    <line x1="0" y1="100" x2="100" y2="100" />
+                    <line x1="0" y1="50" x2="100" y2="50" />
+                    <line x1="0" y1="0" x2="100" y2="0" />
+                </g>
+
+                <g id="text">
+                    <text x="-7" y="100">0%</text>
+                    <text x="-12" y="53">50%</text>
+                    <text x="-16" y="5">100%</text>
+                    <text x="13" y="107">Mænd</text>
+                    <text x="43" y="107">Kvinder</text>
+
+                </g>
+
+                <g id="bars">
+                    <line class="l1" x1="20" y1="100" x2="20" y2="50" />
+                    <line x1="50" class="l2" y1="100" x2="50" y2="25" />
+
+                </g>
+
+                <text x="80" y="45" id="disp">50%</text>
+
+            </svg>
+        </div>
+
+        <div id="bar_text">
+            <h1>Hvem får flest fartbøder?</h1>
+        </div>
+    </section>
+    <section id="section_4">
+        <h1>VIDEO</h1>
+    </section>
+    <section id="section_5">
+        <h1>ANDET INDHOLD?</h1>
+    </section>
     <script src="script.js"></script>
 </body></html>
