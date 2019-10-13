@@ -137,19 +137,19 @@ li a:hover {
 #section_2 {
     background-color: #fff;
     width: 100vw;
-    max-height: 80vh;
+    height: 80vh;
 }
 
 #section_3 {
     background-color: #eaeaea;
     width: 100vw;
-    max-height: 60vh;
+    height: 60vh;
 }
 
 #section_4 {
     background-color: #fff;
     width: 100vw;
-    max-height: 80vh;
+    height: 80vh;
 }
 
 #section_5 {
@@ -296,4 +296,74 @@ li a:hover {
 #section_5 {
     font-size: 8rem;
     align-self: center;
+}
+
+
+/****************MEDIA QUERRIES*******************/
+
+@media only screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    /*NAV*/
+    nav {
+        height: 12vw;
+    }
+
+    .nav_right {
+        display: none;
+    }
+
+    /*CIRKELDIAGRAM*/
+    #section_2 {
+        display: grid;
+        grid-row: repeat(2, 1fr);
+        height: 120vh;
+
+    }
+
+    #cirkel_container {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 100px;
+        margin-bottom: 0;
+
+    }
+
+    #cirkel_text {
+        grid-row: 2;
+        grid-column: 1;
+        align-self: center;
+        font-family: safety;
+        margin: 0;
+    }
+
+    /*SØJLEDIAGRAM*/
+    #section_3 {
+        display: grid;
+        grid-row: repeat(2, .1fr);
+        height: 70vh
+    }
+
+    #bar_container {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 80px
+    }
+
+    #bar_text {
+        margin: 15px;
+        padding: 0;
+        grid-row: 1;
+        font-family: safety;
+    }
+
+    #barchart {
+        height: 100vh;
+        padding-left: 0;
+        margin: 0;
+    }
+
 }
