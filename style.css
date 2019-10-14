@@ -8,7 +8,7 @@ img {}
 
 @font-face {
     font-family: safety;
-    src: url(font/Safety)
+    src: url(assets/font/safety.otf);
 }
 
 h1 {
@@ -39,9 +39,7 @@ nav {
     background-repeat: no-repeat;
 }
 
-.nav_right {
-    width: 70vw;
-}
+.nav_right {}
 
 ul {
     list-style-type: none;
@@ -148,8 +146,10 @@ li a:hover {
 
 #section_3 {
     background-color: #eaeaea;
-    width: 100vw;
+    width: 80vw;
     height: 60vh;
+    padding: 0 10vw 0 10vw;
+
 }
 
 #section_4 {
@@ -235,13 +235,10 @@ li a:hover {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1rf);
-    margin: 0;
-    padding: 0;
 }
 
 #barchart {
     height: 100vh;
-    padding-left: 100px;
 }
 
 #bar_container {
