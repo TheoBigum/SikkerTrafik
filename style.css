@@ -38,6 +38,7 @@ nav {
     width: 70vw;
 }
 
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -94,7 +95,8 @@ li a:hover {
     display: none;
     background-color: #3b4453;
     width: 100vw;
-    position: absolute;
+    position: fixed;
+    left: 0;
 }
 
 .dropdown-content a {
@@ -120,7 +122,7 @@ li a:hover {
 /****************SECTIONS*******************/
 
 #splash {
-    background-image: url(sikker_splash%20cropped.jpg);
+    background-image: url(assets/sikker_splash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
