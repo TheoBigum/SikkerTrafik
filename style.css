@@ -351,8 +351,7 @@ li a:hover {
 }
 
 #section_5 img {
-    padding: 0 20vw;
-    width: 40vw;
+    width: 80vw;
 }
 
 #section_5 h1 {
@@ -363,6 +362,40 @@ li a:hover {
 #section_5 p {
     margin: 1vw 0 1vw 0;
 }
+
+/****************SECTION 6*******************/
+
+#section_6 {
+    background-color: #fff;
+    width: 80vw;
+    height: 120vh;
+    padding: 0 10vw 0 10vw;
+}
+
+#section_6 h1 {
+    font-size: 2rem;
+    margin: 2vw 0 1vw 0;
+}
+
+#section_6 p {
+    margin: 1vw 0 1vw 0;
+}
+
+#ups {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.undskyldninger {
+    width: 7vw;
+    height: 15vw;
+}
+
+.undskyldninger img {
+    width: 7vw;
+    height: 15vw;
+}
+
 
 /********************INFO******************/
 
