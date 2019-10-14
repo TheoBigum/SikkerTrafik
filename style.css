@@ -344,7 +344,7 @@ li a:hover {
 /****************SECTION 5*******************/
 
 #section_5 {
-    background-color: #fff;
+    background-color: #eaeaea;
     width: 80vw;
     height: 120vh;
     padding: 0 10vw 0 10vw;
@@ -357,6 +357,7 @@ li a:hover {
 #section_5 h1 {
     font-size: 2rem;
     margin: 2vw 0 1vw 0;
+    padding-top: 5vh;
 }
 
 #section_5 p {
@@ -367,7 +368,7 @@ li a:hover {
 
 #section_6 {
     background-color: #fff;
-    width: 80vw;
+    width: 40vw;
     height: 120vh;
     padding: 0 10vw 0 10vw;
 }
@@ -396,6 +397,78 @@ li a:hover {
     height: 15vw;
 }
 
+.undskyldninger img:hover {
+    filter: invert(70%);
+}
+
+
+
+/********************FOOTER******************/
+footer {
+    width: 100vw;
+    background-color: #28292c;
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    font-family: safety;
+    color: #919191;
+    padding: 0px;
+    margin: 0;
+}
+
+#footer_left {
+    display: grid;
+    height: 20vw;
+    width: 50vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    color: #919191;
+}
+
+#footer_left p {
+    text-decoration: none;
+    color: #919191;
+    margin: 10px;
+    grid-column: 1/span 3;
+    ;
+}
+
+.bund {
+    grid-row: 3;
+    margin: 0;
+}
+
+.icon img {
+    width: 5vw;
+}
+
+.icon {
+    grid-row: 2;
+    grid-column: 1/;
+    margin-left: 4vw;
+    margin-top: 3vh;
+}
+
+.icon:hover {
+    filter: invert(100%);
+}
+
+footer_right {
+    display: grid;
+    height: 20vw;
+    width: 30vw;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+
+#footer_right a {
+    text-decoration: none;
+    padding: 2vw;
+    color: #919191;
+
+}
+
+#opbtn {}
 
 /********************INFO******************/
 
@@ -405,8 +478,6 @@ li a:hover {
     grid-row: 2;
     padding: 0 15vw 0 0;
 }
-
-
 
 /****************MEDIA QUERRIES*******************/
 
