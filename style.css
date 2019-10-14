@@ -6,6 +6,11 @@ body {
 
 img {}
 
+@font-face {
+    font-family: safety;
+    src: url(font/Safety)
+}
+
 h1 {
     font-family: safety;
 }
