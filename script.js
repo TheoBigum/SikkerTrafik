@@ -54,8 +54,8 @@
               knap.classList.add("hide");
           })
 
-          document.querySelectorAll("img").forEach(knap => {
-              knap.addEventListener("mouseover", hoverSingle);
+          document.querySelectorAll("img").forEach(mand => {
+              mand.addEventListener("mouseover", hoverSingle);
           })
       }
 
@@ -64,8 +64,8 @@
 
           document.querySelector(".undskyldning").classList.remove("hide");
 
-          document.querySelectorAll("img").forEach(knap => {
-              knap.addEventListener("mouseout", noHover);
+          document.querySelectorAll("img").forEach(mand => {
+              mand.addEventListener("mouseout", noHover);
           })
 
       }
