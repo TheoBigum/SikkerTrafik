@@ -158,17 +158,13 @@ li a:hover {
 }
 
 
-
-
-
-
 /****************SPLASH*******************/
 
 #splash {
     background-image: url(assets/sikker_splash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
 
 }
@@ -176,10 +172,17 @@ li a:hover {
 /****************SECTION 1*******************/
 
 #section_undskyldninger {
-    background-color: #fff;
     width: 80vw;
-    height: 120vh;
+    height: 90vh;
     padding: 0 10vw 0 10vw;
+}
+
+#section_undskyldninger p {
+    color: #414b5a;
+}
+
+#section_undskyldninger h1 {
+    color: #414b5a;
 }
 
 /****************sektion_cirkel*******************/
@@ -260,7 +263,7 @@ li a:hover {
 #section_soejle {
     background-color: #eaeaea;
     width: 80vw;
-    height: 60vh;
+    height: 90vh;
     padding: 0 10vw 0 10vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -323,7 +326,7 @@ li a:hover {
 
 
 #section_film {
-    background-color: #fff;
+    background-color: #414b5a;
     width: 80vw;
     height: 120vh;
     padding: 0 10vw 0 10vw;
