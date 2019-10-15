@@ -1,44 +1,71 @@
-     //CIRKELDIAGRAM
-     const values = [68.76, 31.24];
-     const offset = [0];
-     const omkreds = Math.PI * 100;
-     let total = 0;
-     values.forEach(v => total += v);
-     const faktor = omkreds / total;
+      //CIRKELDIAGRAM
+      const values = [68.76, 31.24];
+      const offset = [0];
+      const omkreds = Math.PI * 100;
+      let total = 0;
+      values.forEach(v => total += v);
+      const faktor = omkreds / total;
 
-     console.log(omkreds, total, faktor);
+      console.log(omkreds, total, faktor);
 
-     window.addEventListener("load", animer);
+      window.addEventListener("load", animer);
 
-     function animer() {
+      function animer() {
 
-         document.querySelectorAll("#diagram circle").forEach((cirkel, i) => {
-             //            console.log(cirkel, i);
-             offset.push(values[i] + offset[i]);
-             console.log(offset);
-             cirkel.style.strokeDasharray = values[i] * faktor + " " + omkreds;
-             cirkel.style.strokeDashoffset = -offset[i] * faktor;
+          document.querySelectorAll("#diagram circle").forEach((cirkel, i) => {
+              //            console.log(cirkel, i);
+              offset.push(values[i] + offset[i]);
+              console.log(offset);
+              cirkel.style.strokeDasharray = values[i] * faktor + " " + omkreds;
+              cirkel.style.strokeDashoffset = -offset[i] * faktor;
 
-         })
+          })
 
-     }
-     //SØJLEDIAGRAM
-     const values1 = [68, 32];
+      }
+      //SØJLEDIAGRAM
+      const values1 = [68, 32];
 
-     window.addEventListener("load", animer1);
+      window.addEventListener("load", animer1);
 
-     function animer1() {
+      function animer1() {
 
-         document.querySelectorAll('#bars line').forEach((bar, i) => {
-             console.log(bar, i);
-             bar.setAttribute("y2", 100 - values1[i])
-             bar.addEventListener("mouseover", e => {
+          document.querySelectorAll('#bars line').forEach((bar, i) => {
+              console.log(bar, i);
+              bar.setAttribute("y2", 100 - values1[i])
+              bar.addEventListener("mouseover", e => {
 
-                 document.querySelector("#disp").textContent = values1[i] + "%";
+                  document.querySelector("#disp").textContent = values1[i] + "%";
 
-                 bar.setAttribute("data-value", values1[i]);
-                 console.log(bar.dataset.value);
+                  bar.setAttribute("data-value", values1[i]);
+                  console.log(bar.dataset.value);
 
-             })
-         })
-     }
+              })
+          })
+      }
+
+      //DÅRLIGE UNDSKYLDNINGER
+
+      window.addEventListener("DOMContentLoaded", noHover);
+
+      function noHover() {
+          console.log("Mouseout");
+
+          document.querySelectorAll(".undskyldning").forEach(knap => {
+              knap.classList.add("hide");
+          })
+
+          document.querySelectorAll("img").forEach(knap => {
+              knap.addEventListener("mouseover", hoverSingle);
+          })
+      }
+
+      function hoverSingle() {
+          console.log("Mouseover");
+
+          document.querySelector(".undskyldning").classList.remove("hide");
+
+          document.querySelectorAll("img").forEach(knap => {
+              knap.addEventListener("mouseout", noHover);
+          })
+
+      }

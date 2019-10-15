@@ -185,6 +185,10 @@ li a:hover {
     color: #414b5a;
 }
 
+.undskyldning {
+    width: 30vw;
+}
+
 /****************sektion_cirkel*******************/
 
 
@@ -322,7 +326,7 @@ li a:hover {
 }
 
 
-/****************SECTION 4*******************/
+/****************SECTION FILM*******************/
 
 
 #section_film {
@@ -344,6 +348,20 @@ li a:hover {
 #section_film p {
     margin: 1vw 0 1vw 0;
 }
+
+#section_film a {
+    font-family: safety-light;
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+    margin: 3vw 0 3vw 0;
+}
+
+#section_film a:hover {
+    text-decoration: underline;
+}
+
+
 
 /****************section_18-24diagram*******************/
 
@@ -405,15 +423,17 @@ li a:hover {
     filter: invert(70%);
 }
 
-
+.hide {
+    display: none;
+}
 
 /********************FOOTER******************/
 footer {
     height: 20vw;
-    width: 100vw;
+    width: 90vw;
     background-color: #28292c;
     display: grid;
-    grid-template-columns: 30vw 70vw;
+    grid-template-columns: 30vw 60vw;
     font-family: safety;
     color: #919191;
     padding: 0 5vw 0 5vw;
@@ -469,7 +489,7 @@ footer {
 
 #footer_right {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 20vw 20vw;
     grid-template-rows: 1fr 1fr;
 
 }
@@ -482,7 +502,7 @@ footer {
 #footer_top {}
 
 #footer_bund {
-    width: 50vw;
+    width: 20vw;
 }
 
 #opbtn {}
