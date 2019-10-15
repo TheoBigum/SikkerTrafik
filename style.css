@@ -175,16 +175,17 @@ li a:hover {
 
 /****************SECTION 1*******************/
 
-#section_1 {
-    background-color: #3b4453;
-    width: 100vw;
-    height: 10vh;
+#section_undskyldninger {
+    background-color: #fff;
+    width: 80vw;
+    height: 120vh;
+    padding: 0 10vw 0 10vw;
 }
 
-/****************SECTION 2*******************/
+/****************sektion_cirkel*******************/
 
 
-#section_2 {
+#sektion_cirkel {
     background-color: #fff;
     width: 80vw;
     height: 120vh;
@@ -253,10 +254,10 @@ li a:hover {
     stroke: #83878e;
 }
 
-/****************SECTION 3*******************/
+/****************section_soejle*******************/
 
 
-#section_3 {
+#section_soejle {
     background-color: #eaeaea;
     width: 80vw;
     height: 60vh;
@@ -321,64 +322,64 @@ li a:hover {
 /****************SECTION 4*******************/
 
 
-#section_4 {
+#section_film {
     background-color: #fff;
     width: 80vw;
     height: 120vh;
     padding: 0 10vw 0 10vw;
 }
 
-#section_4 img {
+#section_film img {
     width: 80vw;
 }
 
-#section_4 h1 {
+#section_film h1 {
     font-size: 2rem;
     margin: 2vw 0 1vw 0;
 }
 
-#section_4 p {
+#section_film p {
     margin: 1vw 0 1vw 0;
 }
 
-/****************SECTION 5*******************/
+/****************section_18-24diagram*******************/
 
-#section_5 {
+#section_18-24diagram {
     background-color: #eaeaea;
     width: 80vw;
     height: 120vh;
     padding: 0 10vw 0 10vw;
 }
 
-#section_5 img {
+#section_18-24diagram img {
     width: 80vw;
 }
 
-#section_5 h1 {
+#section_18-24diagram h1 {
     font-size: 2rem;
     margin: 2vw 0 1vw 0;
     padding-top: 5vh;
 }
 
-#section_5 p {
+#section_18-24diagram p {
     margin: 1vw 0 1vw 0;
 }
 
-/****************SECTION 6*******************/
+/****************section_undskyldninger*******************/
 
-#section_6 {
+#section_undskyldninger {
     background-color: #fff;
     width: 40vw;
     height: 120vh;
     padding: 0 10vw 0 10vw;
 }
 
-#section_6 h1 {
+#section_undskyldninger h1 {
     font-size: 2rem;
     margin: 2vw 0 1vw 0;
 }
 
-#section_6 p {
+#section_undskyldninger p {
     margin: 1vw 0 1vw 0;
 }
 
@@ -405,67 +406,80 @@ li a:hover {
 
 /********************FOOTER******************/
 footer {
+    height: 20vw;
     width: 100vw;
     background-color: #28292c;
     display: grid;
-    grid-template-columns: 60vw 40vw;
+    grid-template-columns: 30vw 70vw;
     font-family: safety;
     color: #919191;
-    padding: 0px;
-    margin: 0;
+    padding: 0 5vw 0 5vw;
 }
 
 #footer_left {
-    display: grid;
     height: 20vw;
+    display: grid;
     width: 50vw;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-rows: 5vw 5vw 5vw;
     color: #919191;
+
 }
 
 #footer_left p {
+    font-size: .8rem;
     text-decoration: none;
     color: #919191;
-    margin: 10px;
-    grid-column: 1/span 3;
-    ;
 }
 
-.bund {
+#footer_raad {
+    padding-top: 2vw;
+    width: 30vw;
+    grid-column: 1/span 3;
+}
+
+#footer_kontakt {
+    width: 30vw;
+    grid-column: 1/span 3;
+}
+
+#bund {
     grid-row: 3;
-    margin: 0;
 }
 
 .icon img {
-    width: 5vw;
+    margin: 0;
+    width: 3vw;
+
 }
 
 .icon {
+    padding-top: 2vw;
     grid-row: 2;
     grid-column: 1/;
-    margin-left: 4vw;
-    margin-top: 3vh;
+    margin: 0;
 }
 
 .icon:hover {
     filter: invert(100%);
 }
 
-footer_right {
+#footer_right {
     display: grid;
-    height: 20vw;
-    width: 30vw;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
 }
 
 #footer_right a {
     text-decoration: none;
-    padding: 2vw;
     color: #919191;
+}
 
+#footer_top {}
+
+#footer_bund {
+    width: 50vw;
 }
 
 #opbtn {}
