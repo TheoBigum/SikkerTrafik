@@ -195,7 +195,7 @@ li a:hover {
 #sektion_cirkel {
     background-color: #fff;
     width: 80vw;
-    height: 120vh;
+    height: 100vh;
     padding: 0 10vw 0 10vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -228,7 +228,7 @@ li a:hover {
 }
 
 #cirkel_text {
-    width: 60%;
+    width: 80%;
     grid-column: 2;
     align-self: center;
     font-family: safety;
@@ -267,11 +267,11 @@ li a:hover {
 #section_soejle {
     background-color: #eaeaea;
     width: 80vw;
-    height: 90vh;
-    padding: 0 10vw 0 10vw;
+    height: 100vh;
+    padding: 2vw 10vw 0 10vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1rf);
+    grid-template-rows: repeat(2, 60vh);
 }
 
 #barchart {
@@ -279,6 +279,7 @@ li a:hover {
 }
 
 #bar_container {
+    height: 100vh;
     grid-column: 2;
 
 }
@@ -325,6 +326,12 @@ li a:hover {
     transition: 1s;
 }
 
+#bar_tekst {
+    width: 60vw;
+    height: 40vw;
+    grid-column: 1 / span 2;
+}
+
 
 /****************SECTION FILM*******************/
 
@@ -332,8 +339,16 @@ li a:hover {
 #section_film {
     background-color: #414b5a;
     width: 80vw;
-    height: 120vh;
-    padding: 0 10vw 0 10vw;
+    height: 100vh;
+    padding: 2vw 10vw 0 10vw;
+}
+
+#stor_video {
+    padding: 2vw 10vw 2vw 10vw;
+    width: 60vw;
+    height: 31vw;
+    border: none;
+
 }
 
 #section_film img {
@@ -343,18 +358,20 @@ li a:hover {
 #section_film h1 {
     font-size: 2rem;
     margin: 2vw 0 1vw 0;
+    color: white;
 }
 
 #section_film p {
     margin: 1vw 0 1vw 0;
+    color: white;
 }
 
 #section_film a {
     font-family: safety-light;
     font-size: 2rem;
-    text-decoration: none;
+    text-decoration: underline;
     color: white;
-    margin: 3vw 0 3vw 0;
+    margin: 3vw 0 0 0;
 }
 
 #section_film a:hover {
@@ -368,7 +385,7 @@ li a:hover {
 #section_18-24diagram {
     background-color: #eaeaea;
     width: 80vw;
-    height: 120vh;
+    height: 100vh;
     padding: 0 10vw 0 10vw;
 }
 
@@ -378,7 +395,7 @@ li a:hover {
 
 #section_18-24diagram h1 {
     font-size: 2rem;
-    margin: 2vw 0 1vw 0;
+    margin: 0 0 1vw 0;
     padding-top: 5vh;
 }
 
@@ -391,7 +408,7 @@ li a:hover {
 #section_undskyldninger {
     background-color: #fff;
     width: 40vw;
-    height: 120vh;
+    height: 100vh;
     padding: 0 10vw 0 10vw;
 }
 
