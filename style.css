@@ -267,11 +267,11 @@ li a:hover {
 #section_soejle {
     background-color: #eaeaea;
     width: 80vw;
-    height: 100vh;
+    height: 80vh;
     padding: 2vw 10vw 0 10vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 60vh);
+    grid-template-rows: repeat(2, 40vh);
 }
 
 #barchart {
@@ -368,7 +368,7 @@ li a:hover {
 
 #section_film a {
     font-family: safety-light;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-decoration: underline;
     color: white;
     margin: 3vw 0 0 0;
@@ -406,6 +406,7 @@ li a:hover {
 /****************section_undskyldninger*******************/
 
 #section_undskyldninger {
+    display: none;
     background-color: #fff;
     width: 40vw;
     height: 100vh;
@@ -444,6 +445,26 @@ li a:hover {
     display: none;
 }
 
+/*************Video Portfolio****************/
+
+#portfolio {
+    width: 80vw;
+    height: 300vh;
+    padding: 0 10vw 0 10vw;
+    background-color: #eaeaea;
+}
+
+#portfolio h1 {
+    margin: 0;
+    padding: 2vw 0 0 0;
+}
+
+#portfolio img {
+    width: 50vw;
+    padding: 0 15vw 0 15vw;
+}
+
+
 /********************FOOTER******************/
 footer {
     height: 20vw;
@@ -467,7 +488,7 @@ footer {
 }
 
 #footer_left p {
-    font-size: .8rem;
+    font-size: .9rem;
     text-decoration: none;
     color: #919191;
 }
@@ -507,19 +528,23 @@ footer {
 #footer_right {
     display: grid;
     grid-template-columns: 20vw 20vw;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 80% 20%;
 
 }
 
 #footer_right a {
     text-decoration: none;
     color: #919191;
+    padding: 0 2vw 0 3vw;
+    font-size: 1rem;
 }
 
 #footer_top {}
 
 #footer_bund {
-    width: 20vw;
+    padding: 0 0 0 20vw;
+    width: 40vw;
+    grid-row: 2;
 }
 
 #opbtn {}
